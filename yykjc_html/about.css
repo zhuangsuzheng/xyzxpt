@@ -1,0 +1,232 @@
+*{
+	margin: 0PX;
+	padding: 0PX;
+}
+.header{
+	background-image: url(title-image-3.jpg);
+	width: 100%;
+	height: 600px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+#logo{
+	position: absolute;
+	width: 200px;
+	height: 140px;
+	top: 10px;
+	left: 120px;
+}
+.nav{
+	width: 1320px;
+	height: 140px;
+}
+.nav ul{
+	float: right;
+	margin-top: 60px;
+	margin-right: 80px;
+}
+.nav ul li{
+	list-style: none;
+	float: left;
+	width: 120px;
+	height: 50px;
+	line-height: 50px;
+}
+.nav ul li a{
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	font-weight: 700;
+	display: block;
+	width: 120px;
+	height: 50px;
+	text-align: center;	
+}
+/* .nav ul li:hover a{
+	color: orange;
+	font-size: 16px;
+} */
+#dong:hover a{
+	background-color:#FA914B ;
+	color: #fff;
+}
+#bud:hover a{
+	color: #FFA500;
+}
+.mid{
+	width: 950px;
+	height: 160px;
+	margin: 0px auto;
+}
+.mid p{
+	color: #252525;
+	font-size: 60px;
+	line-height: 80px;
+	font-weight: 600;
+	letter-spacing: 1.5px;
+	margin-bottom: 20px;
+	background-color: rgba(255,255,255,0.85);
+	text-align: center;	
+	padding: 20px 20px;
+	margin-top: 110px;
+}
+.text{
+	width: 700px;
+	height: 85px;
+	margin: 0px auto;
+}
+.text p{
+	color: #ffffff;
+	font-size: 23px;
+	line-height: 29px;
+	font-weight: 600;
+	margin-bottom: 15px;
+	text-align: center;
+}
+.con{
+	width: 100%;
+	height: 800px;
+	margin: 0px auto;
+}
+.con p1{
+	display: block;
+	color: #252525;
+	font-size: 32px;
+	line-height: 38px;
+	font-weight: 550;
+	text-align: center;
+	margin: 100px 30px 30px;
+}
+.con p2{
+	width: 880px;
+	display: block;
+	color: #676767;
+	font-size: 18px;
+	font-weight: 500;
+	text-align: center;
+	line-height: 23px;
+	margin: 0px auto;
+}
+.box{
+	margin-top: 100px;
+	margin-left: 150px;
+}
+.box img{
+	width: 346px;
+	height: 338px;
+	float: left;
+	padding-right: 20px;
+	padding-bottom: 50px;
+}
+.jieshao{
+	width: 1100px;
+	height: 400px;
+}
+.jieshao table{
+	display: block;
+	border-collapse: collapse;
+	width: 1100px;
+	height: 400px;
+	text-align: center;	
+	color:black;
+	margin-left: 150px;
+	margin-top: 80px;
+}
+.jieshao table tr:nth-child(1){
+	font-size: 20px;
+	font-weight: 550;
+	line-height: 70px;
+}
+.jieshao table tr:nth-child(2){
+	font-size: 14px;
+	line-height: 25px;
+	color: #676767;
+}
+.hud{
+	width: 100%;
+	height: 600px;
+	background-image: url(about-parallax.jpg);	
+}
+.hud p1{
+	display: block;
+	color: #FFFFFF;
+	font-size: 32px;
+	line-height: 38px;
+	font-weight: 600;
+	text-align: center;
+	padding-top: 150px;
+	padding-bottom: 50px;
+}
+.hud p2{
+	display: block;
+	width:910px;
+	height: 100px;
+	color: white;
+	font-size: 18px;
+	line-height: 28px;
+	text-align: center;
+	margin: 0px auto;
+	padding-bottom: 36px;
+}
+.qbutton{
+	width: 180px;
+	height: 45px;
+	margin: 0px auto;
+	padding: 0 15px;
+	border: 2px solid #ffffff;
+}
+.qbutton p{
+	font-size: 14px;
+	line-height: 47px;
+	height: 47px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.qbutton:hover{
+	background-color: rgba(255,255,255,0.85) ;
+	border-color: #ffffff ;
+	border-width: 2px ;
+}
+.ender1{
+	width: 100%;
+	height: 340px;
+}
+.tous{
+	width: 100%;
+	height: 360px;
+	background-color: #252525;
+}
+.tous table{
+	position: absolute;
+	border-collapse: collapse;
+	width: 1000px;
+	height: 150px;
+	text-align: center;	
+	color: #FFFFFF;
+	margin-left: 150px;
+	margin-top: 80px;
+}
+.tous table tr:nth-child(1){
+	font-size: 20px;
+	font-weight: 500;
+	padding-bottom: 30px;
+}
+.tous table tr:nth-child(2),table tr:nth-child(3),table tr:nth-child(4){
+	font-size: 14px;
+}
+.end{
+	width: 100%;
+	height: 80px;
+	background-color: #191919;
+}
+.end p{
+	display: block;
+	color: #676767;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: center;
+	padding-top: 30px;
+}
