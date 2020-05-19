@@ -1,8 +1,10 @@
 package io.renren.modules.info.controller;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Map;
 
+import io.renren.common.utils.DateUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -60,6 +62,11 @@ public class InfoController {
     @RequestMapping("/save")
     @RequiresPermissions("info:info:save")
     public R save(@RequestBody InfoEntity info){
+
+        info.setCreateTime(DateUtils.format(new Date()));
+        info.setStatus("1");
+        info.setViews("0");
+    	System.out.println(info.toString());
 		infoService.save(info);
 
         return R.ok();

@@ -9,7 +9,7 @@ import lombok.Data;
 
 /**
  * 信息表
- * 
+ *
  * @author ZhuangSuZheng
  * @email strivezhuang@163.com
  * @date 2020-05-19 08:38:45
@@ -20,7 +20,7 @@ public class InfoEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 *
 	 */
 	@TableId
 	private Integer id;
@@ -37,23 +37,23 @@ public class InfoEntity implements Serializable {
 	 */
 	private String type;
 	/**
-	 * 
+	 *
 	 */
-	private Date createTime;
+	private String createTime;
 	/**
-	 * 
+	 *
 	 */
 	private String views;
 	/**
-	 * 
+	 *
 	 */
 	private String title;
 	/**
-	 * 
+	 *
 	 */
-	private String describe;
+	private String describes;
 	/**
-	 * 
+	 *
 	 */
 	private String status;
 
