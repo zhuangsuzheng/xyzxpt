@@ -30,14 +30,14 @@
     <el-form-item label="标题" prop="title">
       <el-input v-model="dataForm.title" placeholder="标题"></el-input>
     </el-form-item>
-    <el-form-item label="描述" prop="describe">
+    <el-form-item label="描述" prop="describes">
       <el-input
         type="textarea"
         :rows="3"
         placeholder="描述"
-        v-model="dataForm.describe">
+        v-model="dataForm.describes">
       </el-input>
-      <!--<el-input v-model="dataForm.describe" placeholder="描述"></el-input>-->
+      <!--<el-input v-model="dataForm.describes" placeholder="描述"></el-input>-->
     </el-form-item>
     <!--<el-form-item label="" prop="status">
       <el-input v-model="dataForm.status" placeholder=""></el-input>
@@ -77,7 +77,7 @@
           createTime: '',
           views: '',
           title: '',
-          describe: '',
+          describes: '',
           status: ''
         },
         dataRule: {
@@ -99,7 +99,7 @@
           title: [
             { required: true, message: '不能为空', trigger: 'blur' }
           ],
-          describe: [
+          describes: [
             { required: true, message: '不能为空', trigger: 'blur' }
           ],
           status: [
@@ -120,6 +120,7 @@
               method: 'get',
               params: this.$http.adornParams()
             }).then(({data}) => {
+              console.log(data)
               if (data && data.code === 0) {
                 this.dataForm.userId = data.info.userId
                 this.dataForm.userName = data.info.userName
@@ -127,7 +128,7 @@
                 this.dataForm.createTime = data.info.createTime
                 this.dataForm.views = data.info.views
                 this.dataForm.title = data.info.title
-                this.dataForm.describe = data.info.describe
+                this.dataForm.describes = data.info.describes
                 this.dataForm.status = data.info.status
               }
             })
@@ -143,14 +144,11 @@
               method: 'post',
               data: this.$http.adornData({
                 'id': this.dataForm.id || undefined,
-                'userId': this.dataForm.userId,
                 'userName': this.dataForm.userName,
                 'type': this.dataForm.type,
-                'createTime': this.dataForm.createTime,
-                'views': this.dataForm.views,
                 'title': this.dataForm.title,
-                'describe': this.dataForm.describe,
-                'status': this.dataForm.status
+                /*'describes': this.dataForm.describes,*/
+                'status': '1'
               })
             }).then(({data}) => {
               if (data && data.code === 0) {

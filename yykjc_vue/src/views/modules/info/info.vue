@@ -53,7 +53,7 @@
         label="查看次数">
       </el-table-column>
       <!--<el-table-column
-        prop="describe"
+        prop="describes"
         header-align="center"
         align="center"
         label="">
@@ -126,6 +126,7 @@
             'key': this.dataForm.key
           })
         }).then(({data}) => {
+          console.log(data)
           if (data && data.code === 0) {
             this.dataList = data.page.list
             this.totalPage = data.page.totalCount
