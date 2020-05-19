@@ -1,6 +1,14 @@
 # jxx  校园资讯平台
 贾霄霄毕业设计-校园咨询平台
 
+# 如何下载该源码
+- 首先下载git工具 下载地址:https://git-scm.com/
+- 然后安装git工具
+- 在本地新建一个文件夹，作为git的仓库 文件名随意
+- 进入新建好的文件夹，右击选择 git bash here ，打开git命令窗口
+- 在git命令窗口中输入命令:  git clone https://github.com/zhuangsuzheng/xyzxpt.git
+- 等待数据抓取完毕，这样就会将校园资讯平台的所有源码都抓取到本地了
+
 # 官方教程
 …or create a new repository on the command line
 echo "# xyzxpt" >> README.md
