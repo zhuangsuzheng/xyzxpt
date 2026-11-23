@@ -1,8 +1,36 @@
-version: '2'
+version: '3.8'
+
 services:
-  renren-fast:
-    image: renren/fast
+  backend:
+    build: .
+    container_name: campus-info-backend
     ports:
       - "8080:8080"
     environment:
-      - spring.profiles.active=dev
+      - SPRING_PROFILES_ACTIVE=dev
+    depends_on:
+      - mysql
+      - redis
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:8.0
+    container_name: campus-info-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: renren_fast
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: unless-stopped
+
+  redis:
+    image: redis:6-alpine
+    container_name: campus-info-redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
