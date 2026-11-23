@@ -1,7 +1,12 @@
-FROM java:8
+FROM eclipse-temurin:8-jre-alpine
+
+LABEL maintainer="zhuangsuzheng"
+LABEL description="Campus Information Platform Backend"
+
+WORKDIR /app
+
+COPY target/renren-fast.jar app.jar
+
 EXPOSE 8080
 
-VOLUME /tmp
-ADD renren-fast.jar  /app.jar
-RUN bash -c 'touch /app.jar'
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "app.jar"]
